@@ -9,10 +9,10 @@ env:
 jobs:
   test:
     env:
-      MONGODB_CLUSTER_ADDRESS: cluster0.15pwqcc.mongodb.net
-      MONGODB_USERNAME: maximilian
-      MONGODB_PASSWORD: X34Mqtpg10D8RGTi
-      PORT: 8080
+      MONGODB_CLUSTER_ADDRESS: 
+      MONGODB_USERNAME: 
+      MONGODB_PASSWORD: 
+      PORT: 
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -30,12 +30,12 @@ jobs:
         run: npm test
       - name: Output information
         run: 
-          echo "MONDGODB_USERNAME: ${{ env.MONDGODB_USERNAME }}"
+          echo "MONDGODB_USERNAME:"
   deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Output information
         run: |        
-          echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"
+          echo "MONGODB_USERNAME:"
           echo "MONGODB_DB_NAME: $MONGODB_DB_NAME"
